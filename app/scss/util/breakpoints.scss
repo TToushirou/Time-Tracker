@@ -1,0 +1,35 @@
+// Subject to change
+// Mixen MediaQ Min - Max
+
+
+// 425px, 640px, 1024px, 1150px, 1400px
+$breakpoints-up: (
+	'xsmall': '23.4375em',
+	'small': '25.4375em',
+	'medium': '40em',
+	'large': '55em',
+	'xlarge': '71.875em',
+	'xxlarge': '87.5em',
+);
+
+// 639px, 1149px, 1399px
+$breakpoints-down: (
+	'xsmall': '23.4375em',
+	'small': '39.9375em',
+	'medium': '71.8125em',
+	'large': '87.4375em',
+);
+
+// Desktop - MediaQ
+@mixin breakpoint($size) {
+	@media (min-width: map-get($breakpoints-up, $size)) {
+		@content;
+	}
+}
+
+// Moblie - Tablet MediaQ
+@mixin breakpoint-down($size) {
+	@media (max-width: map-get($breakpoints-down, $size)) {
+		@content;
+	}
+}
