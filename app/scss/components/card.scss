@@ -1,242 +1,84 @@
 // Add this section of code to all addition component scss pages 
 @use '../util/' as *;
+@use '../globals/' as *;
 
 
-// Card Global Styles Responsive Layout
-.col-12 {
-    @include breakpoint-down(small) {
-        padding-top: 100px; padding-left: 23px; padding-right: 23px;
+
+.results {
+    background: var(--darkblue);
+    color: var(--vrypaleblue);
+    width: rem(255);
+    height: rem(200);
+    font: var(--font);
+    border-radius: rem(10);
+    text-align: start;
+    padding: rem(30);
+
+    &--work {
+        border-top: rem(44) solid var(--lightorange);
+        border-radius: rem(15);
     }
 
-    @include breakpoint(medium) {
-        display: grid;
-        grid-template-columns: 3, 1fr;
-        grid-template-rows: 3, 1fr;
-        height: 40vh;
-        justify-items: center;
-        align-items: flex-end;
-
-    }
-}
-
-.col-sm-8 {
-    @include breakpoint-down(small) {
-        padding-left: 23px; padding-right: 23px;
+    &--play {
+        border-top: rem(44) solid var(--softblue);
+        border-radius: rem(15);
     }
 
-    @include breakpoint(medium) {
-        max-width: rem(481);
-        left: rem(144);
+    &--study {
+        border-top: rem(44) solid var(--lightred);
+        border-radius: rem(15);
     }
 
-    @include breakpoint(large) {
-        left: rem(270);
+    &--exercise {
+        border-top: rem(44) solid var(--green);
+        border-radius: rem(15);
     }
 
-    @include breakpoint(xlarge) {
-        left: rem(479);
+    &--social {
+        border-top: rem(44) solid var(--violet);
+        border-radius: rem(15);
     }
 
-    
-}
-
-
-// Card image tablet > desktop styling
-.card-img {
-    @include breakpoint(medium) {
-        max-width: rem(450);
-        max-height: rem(220);
+    &--selfcare {
+        border-top: rem(44) solid var(--yellow);
+        border-radius: rem(15);
     }
-}
 
-// Content Styling Order Summary and About Message 
-.card-body {
-    padding-bottom: 0px;
-}
-.card-body h2 {
-    font-weight: 900;
-    font-size: rem(16);
-    text-align: center;
-    color: var(--darkblue);
-    margin-top: 10px; 
 
-    @include breakpoint(small) {
-        font-size: rem(18);
-    }
-}
-.card-body p {
-    font-weight: 500;
-    font-size: rem(14);
-    text-align: center;
-    color: var(--desturatedblue);
-    margin-top: 20px;
-    line-height: rem(22);
-    margin-bottom: 0px;
-
-    @include breakpoint(medium) {
+    &__title {
+        margin-bottom: rem(20);
+        padding-left: rem(10);
         font-size: rem(16);
-        margin-left: rem(25);
-        margin-right: rem(25);
-    }
-    
-    @include breakpoint(small) {
-        font-size: rem(15);
+        font-weight: 600;
     }
 
-    @include breakpoint(medium) {
-        margin-left: 50px;
-        margin-right: 50px;
-    }
-}
-
-// Content Styling Subscription Plan
-.card-plan {
-    margin: 20px;
-    border-radius: rem(10);
-    display: grid;
-    max-width: rem(328);
-
-    @include breakpoint(large) {
-        max-width: rem(420);
+    &__time {
+        font-size: rem(40);
+        padding-left: rem(10);
+        margin-bottom: rem(5);
     }
 
-    
-    @include breakpoint(small) {
-        margin-left: 35px;
-        margin-right: 35px;
-    }
+    &__date {
+        &__weekly {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            align-content: end;
+            height: 3vh;
+            color: var(--paleblue);
+            font-size: rem(15);
+            justify-content: center;
+   
+            &--up {
+                color: var(--limegreen);
+            }
 
-    @include breakpoint(medium) {
-        max-width: rem(300);
-        margin-left: 75px;
-  
-    }
+            &--down {
+                color: var(--brightred);
+            }
 
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    background: var(--vrypaleblue);
-
-    &-image {
-        width: 42px;
-        height: 42px;
-        align-self: center;
-        margin-left: 12px;
-
-        @include breakpoint(small) {
-            width: 48px;
-            height: 48px;
+            &--netrual {
+                color: var(--paleblue);
+            }
         }
-    }
-
-    &-subscription {
-        grid-row: span 2;
-        grid-column: span 2;
-        line-height: rem(25);
-        align-self: center;
-        margin-right: 22px;
-
-        @include breakpoint(small) {
-            grid-row: span 3;
-            margin-right: 50px;
-        }
-    }
-
-    &-subscription h4 {
-        font-weight: 900;
-        font-size: rem(12);
-        text-align: center;
-        color: var(--darkblue);
-        margin-top: 15px;
-
-        @include breakpoint(small) {
-            font-size: rem(14);
-        }
-    }
-
-    &-subscription p {
-        font-weight: 500;
-        font-size: rem(14);
-        text-align: center;
-        color: var(--desturatedblue);
-        line-height: rem(10);
-    }
-
-    &-change {
-        align-self: center;
-        margin-right: 12px;
-    }
-
-    &-change p {
-        color: var(--brightblue);
-        font-weight: 900;
-        font-size: rem(12);
-        text-align: center;
-        padding-top: 20px;
-        text-decoration-line: underline;
-        text-decoration-style: solid;
-        text-decoration-thickness: auto;
-        text-decoration-color: var(--brightblue);
-        transition: all 300ms ease-in-out;
-
-        &:hover {
-            color: var(--desturatedblue);
-            text-decoration: none;
-        }
-
-        @include breakpoint(small) {
-            font-size: rem(14);
-        }
-    }
-}
-
-// Content Styling Button and Cancel Order
-.card-buttons {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-}
-
-.card-buttons button {
-    font-weight:bold;
-    font-size: 14px;
-    color: var(--offwhite);
-    box-shadow: 5px 15px 15px 0px var(--desturatedblue);
-    cursor: pointer;
-    background: var(--brightblue);
-    border-radius: rem(10);
-    width: rem(232);
-    height: rem(45);
-    margin: auto;
-    transition: all 300ms ease-in-out;
-    
-    &:hover {
-        color: var(--darkblue);
-        text-decoration: none;
-    }
-
-    @include breakpoint(xsmall) {
-        width: rem(287);
-        height: rem(48);
-    }
-
-    @include breakpoint(small) {
-        width: rem(300);
-        height: rem(50);
-    }   
-}
-
-.card-buttons-cancel p {
-    text-align: center;
-    padding-top: rem(20);
-    margin-bottom: 30px;
-    font-weight: 700;
-    font-size: rem(14);
-    text-align: center;
-    color: var(--desturatedblue);
-    transition: all 300ms ease-in-out;
-
-    &:hover {
-        color: var(--darkblue);
-        text-decoration: none;
     }
 }

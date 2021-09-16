@@ -8,6 +8,20 @@
   
   <title>Frontend Mentor | Time tracking dashboard</title>
 
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+
+
+  <!-- My CSS & JS lib CSS -->
+  <link rel="stylesheet" href="/dist/style.css">
+  <script defer src='/dist/script.js'></script>
+
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -15,66 +29,170 @@
   </style>
 </head>
 <body>
+  <main>
+    <!--Container For The Page Content / styling layout.scss-->
+    <section class="container">
+      <!--Flex Container for the profile page / styling layout.scss-->
+      <section class="profile">
+        <!--HTML for the profile page / styling profile.scss-->
+        <div class="profile__header">
+          <img
+          class="profile__header--image"
+          src="/images/image-jeremy.png"
+          alt="Profile Picture"
+          />
+          <div class="profile__header--report"><small>Report for</small></div>
+          <div class="profile__header--name"><p>Jeremy Robson</p></div>
+        </div>
+        <div class="profile__body">
+          <div class="profile__body--daily"><a href="#">Daily</a></div>
+          <div class="profile__body--weekly"><a href="#">Weekly</a></div>
+          <div class="profile__body--monthly"><a href="#">Monthly</a></div>
+        </div>
+      </section>
+      <!--Grid Container for the card page / styling layout.scss-->
+      <section class="cards">
+        <!--HTML for work / styling card.scss-->
+        <div class="results results--work">
+          <div class="results__title">
+            <p>Work</p>
+          </div>
+          <div class="results__time">
+            <div class="results__time__weekly"><p>32hrs</p></div>
+          </div>
+          <div class="results___date">
+            <div class="results__date__weekly"><p style="padding-left: 10px;">Last Week -</p>
+              <div class="results__date__weekly--up"><p>36hrs</p></div> 
+            </div>
+          </div>
+        </div>
+        <!--HTML for play / styling card.scss-->
+        <div class="results results--play">
+          <div class="results__title">
+            <p>Play</p>
+          </div>
+          <div class="results__time">
+            <div class="results__time__weekly"><p>10hrs</p></div>
+          </div>
+          <div class="results___date">
+            <div class="results__date__weekly"><p style="padding-left: 10px;">Last Week -</p>
+              <div class="results__date__weekly--down"><p>8hrs</p></div> 
+            </div>
+          </div>
+        </div>
+        <!--HTML for study / styling card.scss-->
+        <div class="results results--study">
+          <div class="results__title">
+            <p>Study</p>
+          </div>
+          <div class="results__time">
+            <div class="results__time__weekly"><p>4hrs</p></div>
+          </div>
+          <div class="results___date">
+            <div class="results__date__weekly"><p style="padding-left: 10px;">Last Week -</p>
+              <div class="results__date__weekly--up"><p>7hrs</p></div> 
+            </div>
+          </div>
+        </div>
+        <!--HTML for exercise / stlying card.scss-->
+        <div class="results results--exercise">
+          <div class="results__title">
+            <p>Exercise</p>
+          </div>
+          <div class="results__time">
+            <div class="results__time__weekly"><p>4hrs</p></div>
+          </div>
+          <div class="results___date">
+            <div class="results__date__weekly"><p style="padding-left: 10px;">Last Week -</p>
+              <div class="results__date__weekly--up"><p>5hrs</p></div> 
+            </div>
+          </div>
+        </div>
+        <!--HTML for social / styling card.scss-->
+        <div class="results results--social">
+          <div class="results__title">
+            <p>Social</p>
+          </div>
+          <div class="results__time">
+            <div class="results__time__weekly"><p>5hrs</p></div>
+          </div>
+          <div class="results___date">
+            <div class="results__date__weekly"><p style="padding-left: 10px;">Last Week -</p>
+              <div class="results__date__weekly--up"><p>10hrs</p></div> 
+            </div>
+          </div>
+        </div>
+        <!--HTML for selfcare / styling card.scss-->
+        <div class="results results--selfcare">
+          <div class="results__title">
+            <p>Selfcare</p>
+          </div>
+          <div class="results__time">
+            <div class="results__time__weekly"><p>2hrs</p></div>
+          </div>
+          <div class="results___date">
+            <div class="results__date__weekly"><p style="padding-left: 10px;">Last Week -</p>
+              <div class="results__date__weekly--netrual"><p>2hrs</p></div> 
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
 
-  Report for
-  Jeremy Robson
-
-  Daily
-  Weekly
-  Monthly
-
-  Work
-  5hrs <!-- daily -->
-  Previous - 7hrs <!-- daily -->
-  32hrs <!-- weekly -->
-  Previous - 36hrs <!-- weekly -->
-  103hrs <!-- monthly -->
-  Previous - 128hrs <!-- monthly -->
-
-  Play
-  1hr <!-- daily -->
-  Previous - 2hrs <!-- daily -->
-  10hrs <!-- weekly -->
-  Previous - 8hrs <!-- weekly -->
-  23hrs <!-- monthly -->
-  Previous - 29hrs <!-- monthly -->
-
-  Study
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 7hrs <!-- weekly -->
-  13hrs <!-- monthly -->
-  Previous - 19hrs <!-- monthly -->
-
-  Exercise
-  1hr <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 5hrs <!-- weekly -->
-  11hrs <!-- monthly -->
-  Previous - 18hrs <!-- monthly -->
-
-  Social
-  1hr <!-- daily -->
-  Previous - 3hrs <!-- daily -->
-  5hrs <!-- weekly -->
-  Previous - 10hrs <!-- weekly -->
-  21hrs <!-- monthly -->
-  Previous - 23hrs <!-- monthly -->
-
-  Self Care
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  2hrs <!-- weekly -->
-  Previous - 2hrs <!-- weekly -->
-  7hrs <!-- monthly -->
-  Previous - 11hrs <!-- monthly -->
-
-  
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Tommy</a>.
   </div>
+  <!-- Optional JavaScript; choose one of the two! -->
+  <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>
 </html>
+
+
+5hrs  daily -->
+Previous - 7hrs <!-- daily -->
+103hrs <!-- monthly -->
+Previous - 128hrs <!-- monthly -->
+
+Play
+1hr <!-- daily -->
+Previous - 2hrs <!-- daily -->
+10hrs <!-- weekly -->
+Previous - 8hrs <!-- weekly -->
+23hrs <!-- monthly -->
+Previous - 29hrs <!-- monthly -->
+
+Study
+0hrs <!-- daily -->
+Previous - 1hr <!-- daily -->
+4hrs <!-- weekly -->
+Previous - 7hrs <!-- weekly -->
+13hrs <!-- monthly -->
+Previous - 19hrs <!-- monthly -->
+
+Exercise
+1hr <!-- daily -->
+Previous - 1hr <!-- daily -->
+4hrs <!-- weekly -->
+Previous - 5hrs <!-- weekly -->
+11hrs <!-- monthly -->
+Previous - 18hrs <!-- monthly -->
+
+Social
+1hr <!-- daily -->
+Previous - 3hrs <!-- daily -->
+5hrs <!-- weekly -->
+Previous - 10hrs <!-- weekly -->
+21hrs <!-- monthly -->
+Previous - 23hrs <!-- monthly -->
+
+Self Care
+0hrs <!-- daily -->
+Previous - 1hr <!-- daily -->
+2hrs <!-- weekly -->
+Previous - 2hrs <!-- weekly -->
+7hrs <!-- monthly -->
+Previous - 11hrs <!-- monthly -->

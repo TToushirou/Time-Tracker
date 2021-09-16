@@ -1,0 +1,60 @@
+@use '../util/' as *;
+@use '../globals/' as *;
+
+
+
+
+.profile {
+    width: rem(255);
+    font: var(--font);
+
+    &__header {
+        height: rem(300);
+        display: grid;
+        grid-template-rows: 125px 20px 170px 1fr;
+        border-radius: rem(15);
+        padding: rem(30);
+        background: var(--purple);
+        color: var(--paleblue);
+
+        &--image {
+            height: rem(85);
+            width: rem(85);
+            border: 3px solid var(--offwhite);
+            border-radius: 50%;
+        }
+
+        &--report {
+            font-weight: 500;
+            font-size: rem(20);
+        }
+
+        &--name {
+            color: var(--offwhite);
+            font-size: rem(36);
+            margin-top: rem(10);
+        }
+    }
+
+    &__body {
+        height: rem(150);
+        display: grid;
+        border-radius: rem(10);
+        padding: rem(30);
+        background: var(--darkblue);
+        color: var(--paleblue);
+
+        &--daily a {
+            @include a-styles();
+        }
+
+        &--weekly a {
+            @include a-styles();
+        }
+
+        &--monthly a {
+            @include a-styles();
+        }
+    }
+}
+
